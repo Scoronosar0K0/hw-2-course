@@ -1,5 +1,11 @@
+.app {
+  padding: 0, 50px;
+}
+
 .page-container {
-  padding: 0 20px;
+  padding-left: calc(50% - 400px);
+  padding-right: calc(50% - 400px);
+  padding-bottom: 30px;
 }
 
 .page-header {
@@ -90,6 +96,14 @@
   padding: 8px;
   padding-left: 0px;
   padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.delete-button {
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 8px 0px;
   cursor: pointer;
 }
 
@@ -195,4 +209,19 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+}
+
+@media (width < 840px) {
+  .page-container {
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+  }
+}
+
+@media (width < 620px) {
+  .page-container {
+    padding-left: calc(50% - 250px);
+    padding-right: calc(50% - 250px);
+  }
+  
 }
