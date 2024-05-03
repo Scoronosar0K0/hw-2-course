@@ -23,6 +23,7 @@ export let posts = [];
 
 export const getToken = () => {
   const token = user ? `Bearer ${user.token}` : undefined;
+
   return token;
 };
 
