@@ -15,7 +15,7 @@ import {
   removeUserFromLocalStorage,
   saveUserToLocalStorage,
 } from "./helpers.js";
-import { renderUserPage } from './components/page-of-user.js'
+import { renderUserPage } from "./components/page-of-user.js";
 
 export let user = getUserFromLocalStorage();
 export let page = null;
@@ -68,10 +68,9 @@ export const goToPage = (newPage, data) => {
     }
 
     if (newPage === USER_POSTS_PAGE) {
-
       const appEl = document.getElementById("app");
 
-      renderUserPage( { appEl, userId: data.userId} );
+      renderUserPage({ appEl, userId: data.userId });
       console.log("Открываю страницу пользователя: ", data.userId);
       page = USER_POSTS_PAGE;
       posts = [];
@@ -112,8 +111,7 @@ const renderApp = () => {
 
   if (page === ADD_POSTS_PAGE) {
     return renderAddPostPageComponent({ appEl });
-    };
-
+  }
 
   if (page === POSTS_PAGE) {
     return renderPostsPageComponent({
@@ -126,6 +124,6 @@ const renderApp = () => {
     goToPage(LOADING_PAGE);
     return;
   }
-}
+};
 
 goToPage(POSTS_PAGE);
